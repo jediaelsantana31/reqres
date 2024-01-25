@@ -31,3 +31,12 @@ jobs:
         with:
           name: REST-Assured-results
           path: target/surefire-reports
+
+      - name: Generate Allure Report
+        run: mvn allure:report
+
+      - name: Archive Allure results
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-results
+          path: target/allure-results
