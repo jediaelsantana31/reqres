@@ -19,9 +19,6 @@ jobs:
           distribution: 'adopt'
           cache: maven
 
-      - uses: browser-actions/setup-chrome@latest
-      - run: google-chrome-stable --version
-
       - name: Build with Maven
         run: mvn clean test
 
