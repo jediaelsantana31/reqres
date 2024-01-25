@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.example</groupId>
@@ -15,6 +15,7 @@
     <junit.version>5.10.1</junit.version>
     <rest-assured.version>5.4.0</rest-assured.version>
     <lombok.version>1.18.30</lombok.version>
+    <allure.version>2.25.0</allure.version>
   </properties>
 
   <dependencies>
@@ -32,10 +33,9 @@
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-params</artifactId>
-      <version>5.10.1</version>
+      <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
-
 
     <!-- Rest Assured -->
     <dependency>
@@ -46,13 +46,13 @@
     <dependency>
       <groupId>io.rest-assured</groupId>
       <artifactId>json-path</artifactId>
-      <version>5.4.0</version>
+      <version>${rest-assured.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>io.rest-assured</groupId>
       <artifactId>json-schema-validator</artifactId>
-      <version>5.4.0</version>
+      <version>${rest-assured.version}</version>
     </dependency>
 
     <dependency>
@@ -79,6 +79,19 @@
       <groupId>com.github.javafaker</groupId>
       <artifactId>javafaker</artifactId>
       <version>1.0.2</version>
+    </dependency>
+
+    <!-- Allure dependencies -->
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-junit5</artifactId>
+      <version>${allure.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-rest-assured</artifactId>
+      <version>${allure.version}</version>
     </dependency>
   </dependencies>
 </project>

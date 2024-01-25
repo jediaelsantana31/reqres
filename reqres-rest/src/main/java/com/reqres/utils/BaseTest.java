@@ -5,6 +5,11 @@ import com.reqres.pojo.User;
 import io.restassured.RestAssured;
 
 public class BaseTest {
+
+    static {
+        System.setProperty("allure.results.directory", "allure-results");
+    }
+
     private Faker faker;
 
     public BaseTest() {

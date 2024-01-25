@@ -2,6 +2,7 @@ package com.reqres.service;
 
 import com.reqres.pojo.User;
 import com.reqres.validation.UserValidation;
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
@@ -19,6 +20,7 @@ public class UserService {
 
     public UserValidation createUser(User user) {
         Response response = given()
+                .filter(new AllureRestAssured())
                 .contentType(ContentType.JSON)
                 .body(user)
                 .post(currentEndpoint);
