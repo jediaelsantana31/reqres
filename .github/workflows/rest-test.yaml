@@ -18,17 +18,8 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-<<<<<<< HEAD
       - name: Build and Run REST Assured Tests with Maven
         run: mvn test
-=======
-    - name: Set up JDK 8
-      uses: actions/setup-java@v2
-      with:
-        java-version: '8'
-        distribution: 'adopt'
-        cache: maven
->>>>>>> 88e6449ffccb9b87794cb2cd2c31cd8c323ba61d
 
       - name: Archive REST-Assured results
         uses: actions/upload-artifact@v3
