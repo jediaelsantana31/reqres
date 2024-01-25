@@ -29,6 +29,13 @@
       <artifactId>junit-jupiter-engine</artifactId>
       <version>${junit.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <version>5.10.1</version>
+      <scope>test</scope>
+    </dependency>
+
 
     <!-- Rest Assured -->
     <dependency>
@@ -71,8 +78,7 @@
     <dependency>
       <groupId>com.github.javafaker</groupId>
       <artifactId>javafaker</artifactId>
-      <version>1.0.2</version> <!-- Use a versão mais recente disponível -->
-      <scope>test</scope>
+      <version>1.0.2</version>
     </dependency>
   </dependencies>
 </project>

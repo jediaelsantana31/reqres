@@ -9,11 +9,19 @@ import static io.restassured.RestAssured.given;
 
 public class UserService {
 
+    private static final String BASE_PATH = "/api/users";
+    private String currentEndpoint = BASE_PATH;
+
+    public UserService setEndpoint(String endpoint) {
+        this.currentEndpoint = endpoint;
+        return this;
+    }
+
     public UserValidation createUser(User user) {
         Response response = given()
                 .contentType(ContentType.JSON)
                 .body(user)
-                .post("/users");
+                .post(currentEndpoint);
 
         return new UserValidation(user, response.then());
     }
