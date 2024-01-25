@@ -17,5 +17,6 @@ public class CreateUserTest extends BaseTest {
     @Test
     public void shouldCreateUserSuccessfully() {
 
+
     }
 }
