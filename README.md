@@ -42,3 +42,46 @@ Execute the Selenium tests using the following Maven command:
 		│   │   └── resources
 		│   │       └── schemas
 		└── pom.xml
+
+  # Test Cases
+  
+  **Scenarios:**
+```
+ Feature: User Creation
+
+  Scenario Outline: Given a valid user, when creating a user, then the user is registered
+    Given a valid user
+    When creating the user
+    Then the user is registered successfully
+
+	Examples:
+	    | simulate error in the contract |
+            | true                           |
+            | false			     |
+
+  Scenario: Given a valid user, when creating a user with an invalid endpoint, then should return 404 status code
+    Given a valid user
+    When creating the user with an invalid endpoint
+    Then should return a 404 status code
+
+
+  Scenario: Given a valid user, when creating a user with an invalid body, then should return 400 status code
+    Given a valid user
+    When creating the user with an invalid body
+    Then should return a 400 status code
+```
+
+# Test Results
+
+| Test Case                                                 | Status  |
+|-----------------------------------------------------------|---------|
+| Given a valid user, when creating a user, then the user is registered - true | Passed  |
+| Given a valid user, when creating a user, then the user is registered - false | Failed  |
+| Given a valid user, when creating a user with an invalid endpoint, then should return 404 status code | Passed  |
+| Given a valid user, when creating a user with an invalid body, then should return 400 status code | Failed  |
+
+## Overall Test Results
+
+- Passed: 2
+- Failed: 2
+- Total Executed: 4
