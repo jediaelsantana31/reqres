@@ -2,7 +2,7 @@ name: Java CI with Maven - Rest Assured
 
 on:
   push:
-    branches: [ feature ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
