@@ -8,17 +8,20 @@ on:
 
 jobs:
   build:
-  
     runs-on: ubuntu-latest
-  
+
     steps:
     - uses: actions/checkout@v4
+
     - name: Set up JDK 8
-      uses: actions/setup-java@v4
+      uses: actions/setup-java@v2
       with:
         java-version: '8'
         distribution: 'temurin'
         cache: maven
-      
-    - name: Test Execution
+
+    - name: Verify Maven installation
+      run: mvn -v
+
+    - name: Install dependencies and run tests
       run: mvn clean test
