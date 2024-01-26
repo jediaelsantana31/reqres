@@ -85,3 +85,10 @@ Execute the Selenium tests using the following Maven command:
 - Passed: 2
 - Failed: 2
 - Total Executed: 4
+#### Report
+<p>
+  <a href="https://jediaelsantana31.github.io/reqres/21/" target="_blank" rel="noopener noreferrer">
+    <img src="https://play-lh.googleusercontent.com/cgV0FUZ-pEVZ3EPSVimad3HfLjByBi7ga8zue08D9QNxC_2isbyom4N6aonx_nodFng=w240-h480-rw" alt="Allure Report" width="50" height="50">
+  </a>
+</p>
+
